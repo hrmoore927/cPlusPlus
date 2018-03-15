@@ -1,26 +1,37 @@
 //Lab7-4.cpp - displays the average electric bill
-//Created/revised by <your name> on <current date>
+//Created/revised by Heather Moore on 2/28/18
 
-#include <iomanip>
 #include <iostream>
-//end if
-{
-}	//end of main function
-cin >> bill;
-cin >> bill;
-cout << "Average electric bill for " << months << " months: $" << avgBill << endl;
-cout << "Bill for month " << months + 1 << ": ";
-cout << "Bill for month 1: ";
-cout << "No bill amount entered." << endl;
-cout << fixed << setprecision(2);
-double avgBill = 0.0;
-double bill = 0.0;
-double totalBills = 0.0;
-else
-if (months > 0)
-int main()
-int months = 0;
-months += 1;
-return 0;
+#include <iomanip>
+
 using namespace std;
-while (bill >= 0.0)
+int main()
+{
+    double bill = 0.0;
+    double totalBills = 0.0;
+    double avgBill = 0.0;
+    int months = 0;
+    
+    cout << "Bill for month 1: ";
+    cin >> bill;
+    
+    while (bill >= 0.0)
+    {
+        totalBills += bill;
+        months += 1;
+        cout << "Bill for month " << months + 1 << ": ";
+        cin >> bill;
+    } //end while
+    
+    if (months > 0)
+    {
+        avgBill = totalBills / months;
+        cout << fixed << setprecision(2);
+        cout << "Average electric bill for " << months
+        << " months: $" << avgBill << endl;
+    }
+    else
+        cout << "No bill amount entered." << endl;
+    //end if
+    return 0;
+} //end of main function

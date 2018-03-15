@@ -8,11 +8,13 @@ using namespace std;
 
 int main()
 {	
+	// declare and initialize day, totalTexts, dailyTexts, and average
 	int day = 0;
 	int totalTexts = 0;	
     int dailyTexts = 0;
     double average = 0.0;
  
+	// for loop to enter data for 7 days of the week
 	for (day = 1; day < 8; day += 1)
 	{
 		cout << "How many text messages did you send on day " 
@@ -21,6 +23,7 @@ int main()
 		totalTexts += dailyTexts;
 	}	//end for
 
+	// find and display average number texts
 	average = static_cast<double>(totalTexts) / (day - 1);
 	cout << fixed << setprecision(0);
 	cout << endl << "You sent approximately " 
