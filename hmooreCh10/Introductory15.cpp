@@ -1,0 +1,42 @@
+//Introductory15.cpp - number guessing game
+//Created/revised by Heather Moore on 3/28/18
+
+#include <iostream>
+#include <ctime>
+//#include <cstdlib>
+using namespace std;
+
+void randomNum(int &upper, int &lower, int &number);
+
+int main()
+{
+	int randomNumber = 0;
+	int numberGuess = 0;
+    int minNum = 0;
+    int maxNum = 0;
+
+    cout << "Please enter the minimum random number: ";
+    cin >> minNum;
+	cout << "Please enter the maximum random number: ";
+    cin >> maxNum;
+
+    randomNum(maxNum, minNum, randomNumber);
+	//get first guess from user
+	cout << "Guess a number from " << minNum << " through " << maxNum << ": ";
+	cin >> numberGuess;
+
+	while (numberGuess != randomNumber)
+	{
+		cout << "Sorry, guess again: ";
+		cin >> numberGuess;
+	}	//end while
+
+	cout << endl << "Yes, the number is "
+		<< randomNumber << "." << endl;
+	return 0;
+}   //end of main function
+
+void randomNum(int &upper, int &lower, int &number) {
+    srand(static_cast<int>(time(0)));
+	number = lower + rand() % (upper - lower + 1);
+}

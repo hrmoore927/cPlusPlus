@@ -1,12 +1,12 @@
 //SwatTheBugs24.cpp - displays a bonus 
-//Created/revised by <your name> on <current date>
+//Created/revised by Heather Moore on 4/1/18
 
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
 //function prototype
-void calcBonus(double, double, double);
+void calcBonus(double &salesAmt, double &bonusRate, double &bonusAmt);
 
 int main()
 {	
@@ -26,7 +26,7 @@ int main()
 }   //end of main function
 
 //*****function definitions*****
-void calcBonus(double salesAmt, double bonusRate, double bonusAmt)
+void calcBonus(double &salesAmt, double &bonusRate, double &bonusAmt)
 {
 	bonusAmt = salesAmt * bonusRate;
 } //end of calcAndDisplayBonus function
