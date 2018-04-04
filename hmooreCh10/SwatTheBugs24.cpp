@@ -6,7 +6,7 @@
 using namespace std;
 
 //function prototype
-void calcBonus(double &salesAmt, double &bonusRate, double &bonusAmt);
+void calcBonus(double salesAmt, double bonusRate, double &bonusAmt);
 
 int main()
 {	
@@ -14,8 +14,10 @@ int main()
 	double rate = 0.0;
 	double bonus = 0.0;
 
+    //user enters sales amount
 	cout << "Enter sales: ";
 	cin >> sales;
+    //user enters bonus rate
 	cout << "Enter bonus rate (in decimal form): ";
 	cin >> rate;
 
@@ -26,7 +28,7 @@ int main()
 }   //end of main function
 
 //*****function definitions*****
-void calcBonus(double &salesAmt, double &bonusRate, double &bonusAmt)
+void calcBonus(double salesAmt, double bonusRate, double &bonusAmt)
 {
 	bonusAmt = salesAmt * bonusRate;
 } //end of calcAndDisplayBonus function

@@ -51,7 +51,7 @@ void standardShip(double &total, double &shipping) {
 }
 
 void premiumShip(double &total, double &shipping) {
-    if (total <= 100) {
+    if (total <= 49.99) {
         shipping = 4.99;
     } else {
         shipping = 0;

@@ -15,15 +15,13 @@ int main()
     int hours = 0;
     int overtimeHours = 0;
     int doubletimeHours = 0;
-    double overtimeGross = 0.0;
-    double doubletimeGross = 0.0;
     double rate = 0.0;
     double total = 0.0;
     
     //user enters hours worked
-    
     cout << "Please enter the hours worked this week (enter a negative number to exit): ";
     cin >> hours;
+    
     //while hours is greater than 0 user enters pay rate
     while (hours >= 0) {
         cout << "Please enter the hourly pay rate: ";
@@ -50,7 +48,6 @@ int main()
         cin >> hours;
     }
     return 0;
-    
 }
 
 //functions
