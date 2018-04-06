@@ -28,7 +28,7 @@ int main()
         cout << "Plus (enter L)" << endl;
         cout << "Premium (enter R)" << endl;
         cout << "Please enter membership type (see above memberships): ";
-        cin >> membership >> endl;
+        cin >> membership;
         
         //if membership is standarad
         if (toupper(membership) == 'S') {

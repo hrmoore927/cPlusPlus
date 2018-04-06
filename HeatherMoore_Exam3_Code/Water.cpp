@@ -66,7 +66,7 @@ int main()
     // end of main function
 }
 
-//function
+//functions
 double calcGallons(double curReading, double prevReading) {
     double gallonsUsed = 0.0;
     gallonsUsed = curReading - prevReading;
